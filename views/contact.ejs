@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact GS</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="ressources/favicon.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <main>
+      <div class="contactez-nous">
+        <h1>Contactez-nous</h1>
+            <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas à utiliser ce formulaire pour prendre contact avec nous !</p>
+            
+                <form action="/contact" method="POST">
+                    <div>
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" placeholder="Votre nom" required>
+                    </div>
+                    
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" placeholder="monadresse@mail.com" required>
+                    </div>
+                    
+                    <div>
+                        <label for="sujet">Quel est le sujet de votre message ?</label>
+                        
+                        <select name="sujet" required>
+                            <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
+                            <option value="probleme-compte">Problème avec mon compte</option>
+                            <option value="question-salle">Question à propos de la salle GymSpeed</option>
+                            <option value="autre">Autre...</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message">Votre message</label>
+                        <textarea required></textarea>
+                    </div>
+                    
+                    <div>
+                        <button type="submit">Envoyer mon message</button>
+                    </div>
+                    
+                    <div class="contact">
+                         <a href="https://www.google.com/search?q=+17+Rue+Claude+Terrasse%2C+paris+16%C3%A8me+&sca_esv=578022390&rlz=1CAUPFP_enFR1058&ei=ImhAZYi1G4OlkdUPwLe5oA8&ved=0ahUKEwiIzt6noJ-CAxWDUqQEHcBbDvQQ4dUDCBE&uact=5&oq=+17+Rue+Claude+Terrasse%2C+paris+16%C3%A8me+&gs_lp=Egxnd3Mtd2l6LXNlcnAiJiAxNyBSdWUgQ2xhdWRlIFRlcnJhc3NlLCBwYXJpcyAxNsOobWUgMgIQJjIGEAAYFhgeMgIQJkjHYFDiJ1itWnAEeACQAQCYAa8BoAGqGaoBBDMuMjS4AQPIAQD4AQL4AQHCAgoQABhHGNYEGLADwgIFEAAYogTCAggQIRigARjDBMICBxAhGKABGArCAgUQIRiSA8ICBRAhGKAB4gMEGAAgQYgGAZAGCA&sclient=gws-wiz-serp" ><i class="fa-solid fa-location-dot"></i>17 Rue Claude Terrasse, Paris 16ème</a><br>
+
+                        <a href="mailto:Agymspeed@gmail.com"><i class="fa fa-envelope"></i>Agymspeed@gmail.com</a><br>
+
+                        <a href="tel:+33652870290"><i class="fa fa-phone"></i>06 52 87 02 90</a>
+                    </div>
+                </form>
+            <button class="retour" type="button" onclick="location.href='/'">Retour</button>
+     </div>
+    </main>
+    
+</body>
+</html> 

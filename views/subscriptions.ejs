@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abonnements GS</title>
+    <link rel="stylesheet" href="css/abonnements.css">
+    
+</head>
+<body>
+<header>
+    <h1 class="titre">Abonnements GymSpeed</h1>
+</header>
+
+    <main class="abonnements">
+        <table>
+            <thead>
+                <tr>
+                    <th>Accès STANDARD
+                    premier mois 19,99 €
+                    puis 29,99€ /mois</th>
+                    
+                </tr>
+                <tr>
+                    <th>Accès PREMIUM
+                    premier mois 19,99 €
+                    puis 39,99€ /mois </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Accès à la salle & tous ses espaces</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Accés au coaching at home</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Séance essai offerte pour un proche</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Accès à tout le réseau GymSpeed</td>
+                    <td></td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>COURS collectif</td>
+                    <td></td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Frais inscription</td>
+                    <td>25 €</td>
+                    <td>25 €</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    
+    <footer>
+      
+        <form action="/choose-subscription" method="POST">
+          <input type="hidden" name="subscriptionType" value="standard">
+          <button class="standard" type="submit">Standard</button>
+        </form>
+        
+        <form action="/choose-subscription" method="POST">
+          <input type="hidden" name="subscriptionType" value="premium">
+          <button class="premium" type="submit">Premium</button>
+        </form>
+
+        <button class="retour" type="button" onclick="location.href='/'">Retour</button>
+    </footer>
+
+
+</body>
+</html>

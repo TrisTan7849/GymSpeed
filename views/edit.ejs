@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modifier Utilisateur</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000; 
+    color: #fff;
+  }
+
+  header h1 {
+    text-align: center;
+    color: #ff0000; 
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  form {
+    background-color: #202020; 
+    border: 2px solid #ff0000; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5); 
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  button {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: #e60000;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  footer button {
+    background-color: transparent;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  footer button:hover {
+    background-color: #ff0000;
+    color: #fff;
+  }
+</style>
+
+</head>
+<body>
+  <header>
+    <h1>Modifier les Informations de l'Utilisateur</h1>
+  </header>
+
+  <main>
+    <form action="/admin/users/edit/<%= user._id %>" method="post">
+      <div class="form-group">
+        <label for="firstname">Prénom:</label>
+        <input type="text" id="firstname" name="firstname" value="<%= user.firstname %>" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastname">Nom:</label>
+        <input type="text" id="lastname" name="lastname" value="<%= user.lastname %>" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dateOfBirth">Date de Naissance:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" value="<%= user.dateOfBirth.toISOString().split('T')[0] %>" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Téléphone:</label>
+        <input type="text" id="phone" name="phone" value="<%= user.phone %>" maxlength="10" oninput="allowNumbersOnly(this);" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="<%= user.email %>" required>
+      </div>
+
+      <div class="form-group">
+        <label for="city">Ville:</label>
+        <input type="text" id="city" name="city" value="<%= user.city %>" required>
+      </div>
+
+      <div class="form-group">
+        <label for="isAdmin">Administrateur:</label>
+        <input type="checkbox" id="isAdmin" name="isAdmin" <%= user.isAdmin ? 'checked' : '' %>>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">ACCES Standard</label>
+        <input type="checkbox" id="standard" name="standard" >
+        
+        <label for="password">ACCES Premium</label>
+        <input type="checkbox" id="premium" name="premium" >
+      </div>
+
+      <div class="form-group">
+        <button onclick="window.location.href='/admin'" type="submit">Mettre à jour</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <button onclick="window.location.href='/admin'">Retour au tableau de bord</button>
+  </footer>
+  
+ <script src="./javascript/register.js"></script>
+</body>
+</html>

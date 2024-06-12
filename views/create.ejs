@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Création d'Utilisateur</title>
+  <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #930000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+}
+
+main form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+}
+
+footer button {
+    background: none;
+    border: 1px solid red;
+    color: red;
+}
+
+footer button:hover {
+    background-color: red;
+    color: white;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Créer un Nouvel Utilisateur</h1>
+  </header>
+
+  <main>
+    <form action="/admin/users" method="post">
+      <div>
+        <label for="firstname">Prénom :</label>
+        <input type="text" id="firstname" name="firstname" required>
+      </div>
+
+      <div>
+        <label for="lastname">Nom :</label>
+        <input type="text" id="lastname" name="lastname" required>
+      </div>
+
+      <div>
+        <label for="dateOfBirth">Date de Naissance :</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+      </div>
+
+      <div>
+        <label for="phone">Numéro de Téléphone :</label>
+        <input type="text" id="phone" name="phone" maxlength="10" oninput="allowNumbersOnly(this);" required>
+      </div>
+
+      <div>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div>
+        <label for="city">Ville :</label>
+        <input type="text" id="city" name="city" required>
+      </div>
+
+      <div>
+        <label for="password">Mot de Passe :</label>
+        <input type="password" id="password" name="password" maxlength="10" required>
+      </div>
+      
+      <div>
+        <label for="password">ACCES Standard</label>
+        <input type="checkbox" id="standard" name="standard" >
+        
+        <label for="password">ACCES Premium</label>
+        <input type="checkbox" id="premium" name="premium" >
+      </div>
+
+      <div>
+        <label for="isAdmin">Administrateur :</label>
+        <input type="checkbox" id="isAdmin" name="isAdmin">
+      </div>
+
+      <button onclick="location.href='/admin'" type="submit">Créer</button>
+    </form>
+  </main>
+
+  <footer>
+    <button type="button" onclick="location.href='/admin'">Retour</button>
+  </footer>
+
+<script src="./javascript/register.js"></script>
+</body>
+</html>

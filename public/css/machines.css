@@ -1,0 +1,309 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: black;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #000;  
+    color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px; 
+    height: 90px;
+    width:100%;
+}
+
+.logo img {
+    height: 110px; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+}
+
+.navbar button {
+    color: #FFF;
+    font-size: 14px;
+    display: flex;
+    padding: 8px 25px ;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    gap: 10px;
+    border-radius: 10px;
+    background: #E10000;
+    cursor: pointer;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #FFF;
+    text-align: center;
+    padding: 14px 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.navbar a:hover {
+    background-color: #E10000;
+    color: white;
+}
+
+.navbar button:hover {
+    background-color: #ff3434;
+}
+
+.premiere{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ab00006b;
+    padding: 80px;
+    height: 140px; 
+    text-align: center;
+    margin-bottom: 30px; 
+}
+.deuxieme{
+    display: flex;
+    align-items: center;
+    background-color: #ab0000;
+    padding: 80px;
+    height: 140px; 
+    text-align: center;
+    margin-block: 8px;
+    margin-bottom: 30px; 
+}
+
+.image-placeholder {
+    height: 300px; 
+    margin: 5px;
+}
+
+.titre, .titre2 {
+    font-weight: bold;
+}
+
+.haut {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start;
+}
+
+.haut-machines {
+    max-width: 50%;
+    text-align: center;
+}
+
+.haut-image img {
+    width: 680px; 
+    height: 320px;
+    
+}
+
+h2 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color:  #ab0000;
+}
+
+.machineb {
+    background-color: #ab0000;
+    color: white;
+    cursor: pointer;
+    margin: 115px;
+    width: 100px;
+    height: 48px;
+    border-radius: 18px;
+    font-weight: bold;
+}
+
+.machineb:hover {
+ color: black;
+ background-color: white;
+}
+
+.footer {
+    background: linear-gradient(45deg, #ab0000, #000);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: center;
+}
+
+.footer-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column:nth-child(2) {
+    align-items: center;
+}
+
+.footer-column:nth-child(3) {
+    align-items: flex-end;
+}
+
+.footer-column a, .footer-column img {
+    margin-bottom: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.facebook i,
+.instagram i{
+    color: white;
+    padding: 15px;
+    font-size: 40px;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    
+body {
+    overflow-x: hidden;
+}
+
+.burger-menu {
+    display: block;
+}
+
+.navbar {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navbar.open {
+    display: flex;
+}
+
+.logo img {
+    height: 80px; 
+}
+
+
+.navbar {
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+
+.navbar button {
+    padding: 6px 15px; 
+    font-size: 12px; 
+}
+
+
+.navbar a {
+    padding: 10px 12px; 
+    font-size: 12px; 
+}
+
+
+header {
+    padding: 5px 10px; 
+    height: auto; 
+}
+
+/* Styles pour la section 'haut' */
+.haut, .haut-machines, .haut-image, .haut-image img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.haut-machines img {
+    width: 90%;
+}
+
+.machineb {
+    margin: 10px;
+    font-size: 10px;
+    margin-top: 47px;
+    margin-bottom: 53px;
+}
+
+.premiere {
+    display: flex;
+    align-items: center; 
+}
+
+.premiere img {
+    max-width: 50%; 
+    height: auto;
+}
+
+.premiere p, .premiere {
+    font-size: 5px;
+    margin: 0; 
+    
+}
+.titre {
+    font-size: 12px;
+}
+
+.deuxieme {
+    display: flex;
+    align-items: center; 
+}
+
+.deuxieme img {
+    max-width: 50%; 
+    height: auto;
+}
+
+.deuxieme p, .deuxieme {
+    font-size: 5px;
+    margin: 0; 
+    
+}
+
+    
+.footer {
+    flex-direction: column;
+    max-width:100%;
+   
+}
+
+.footer-column {
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+.footer-column img {
+    width: 70%;
+    
+}
+
+.facebook i,
+.instagram i{
+    font-size: 25px;
+    padding: 9px;
+}
+
+}

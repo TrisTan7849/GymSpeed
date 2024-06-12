@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Administrateur</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <header>
+    <h1 class="titre">BIENVENUE Administrateur</h1>
+  </header>
+
+  <main>
+    <table>
+      <tbody>
+        <% users.forEach(function(user) { %>
+          <tr>
+            <td><%= user.firstname %></td>
+            <td><%= user.lastname %></td>
+            <td><%= user.dateOfBirth.toISOString().split('T')[0] %></td>
+            <td><%= user.phone %></td>
+            <td><%= user.email %></td>
+            <td><%= user.city %></td>
+            <td><%= user.subscriptions ? user.subscriptions.type : 'Non abonné' %></td>
+            <td>
+              
+              <button onclick="location.href='/admin/users/edit/<%= user._id %>'">Modifier</button>
+              <button onclick="if(confirm('Confirmer la suppression?')) location.href='/admin/users/delete/<%= user._id %>'">Supprimer</button>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <button type="button" onclick="location.href='/admin/create'">Créer</button>
+    <button type="button" onclick="if(confirm('Confirmer la déconnexion?')) location.href='/admin/logout'">Déconnexion</button>
+  </footer>
+
+</body>
+</html>

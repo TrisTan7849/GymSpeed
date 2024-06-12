@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payez en ligne GS</title>
+    <link rel="stylesheet" href="css/paiement.css">
+</head>
+<body>
+    <main>
+        <form action="/paiement" method="POST">
+            <button type="button" onclick="location.href='/'">Retour</button>
+            
+            <div class="payment-form">
+                <h2>Payez en ligne</h2>
+                
+                <div class="card-icons">
+                    <img src="images/image VISA.png" alt="Visa">
+                    <img src="images/images MASTERCARD.webp" alt="Mastercard">
+                </div>
+                
+                <input type="text" id="name" name="name" placeholder="Nom sur la carte" required>
+                <input type="text" id="number" name="number"  placeholder="N° de carte"  maxlength="19" required>
+                
+                <div class="card-cvc">
+                    <input type="text" id="expiration" name="expiration" placeholder="MM/AA" maxlength="5" required>
+                    <input type="text" id="cvc" name="cvc" placeholder="CVC"  maxlength="3" required>
+                </div>
+                
+                    <label for="total">Total à payer 44,99 €</label>
+                    
+                    <button type="submit">Abonnements</button>
+                    <button type="submit">Payer</button>
+                
+            </div>
+        </form>
+    </main>
+    
+    
+</body>
+</html>
+            
+            

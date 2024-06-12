@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil Utilisateur</title>
+  <link rel="stylesheet" href="css/utilisateur.css">
+</head>
+<body>
+    <header>
+        <h1 class="titre">Ton Profil GymSpeed</h1>
+    </header>
+    
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Prénom</th>
+                        <th>Nom</th>
+                        <th>Date de naissance</th>
+                        <th>Téléphone portable</th>
+                        <th>E-mail</th>
+                        <th>Ville</th>
+                        <th>Mot de passe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" id="firstname" name="firstname" required></td>
+                        <td><input type="text" id="lastname" name="lastname" required></td>
+                        <td><input type="date" id="date" name="date" required></td>
+                        <td><input type="text" id="phone" name="phone" maxlength="10" oninput="allowNumbersOnly(this);" required></td>
+                        <td><input type="email" id="email" name="email" maxlength="30" required></td>
+                        <td><input type="text" id="city" name="city" required></td>
+                        <td><input type="password" id="password" name="password" maxlength="10" required></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        
+        <footer>
+            <button type="submit">Modifier</button>
+            <button type="submit" onclick="confirmerModification()" onclick="window.location.href='/'" >Valider</button>
+            <button type="button" onclick="window.location.href='/'">Déconnexion</button> 
+        </footer>
+        
+<script src="./javascript/register.js"></script>
+
+</body>
+</html>
+            
